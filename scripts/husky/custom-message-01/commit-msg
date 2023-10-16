@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
+
+# Call the branch validation script
+. "$(dirname -- "$0")/branch-validation.sh"
